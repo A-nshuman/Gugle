@@ -34,12 +34,14 @@ document.addEventListener('DOMContentLoaded', function () {
             body.style.backgroundColor = 'black'
             document.getElementById('searchInput').style.backgroundColor = 'black'
             document.getElementById('searchInput').style.color = 'white'
+            document.getElementById('feeling').style.backgroundColor = 'rgb(91, 91, 91)'
         }
         else {
             themeBtn.innerHTML = '🌙'
             body.style.backgroundColor = 'white'
             document.getElementById('searchInput').style.backgroundColor = 'white'
             document.getElementById('searchInput').style.color = 'black'
+            document.getElementById('feeling').style.backgroundColor = 'rgba(91, 91, 91, 0.123)'
         }
     });
 });
