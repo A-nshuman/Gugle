@@ -17,6 +17,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+// Dark Theme 
+
 document.addEventListener('DOMContentLoaded', function () {
 
     var themeBtn = document.getElementById('Theme');
@@ -38,6 +40,22 @@ document.addEventListener('DOMContentLoaded', function () {
             body.style.backgroundColor = 'white'
             document.getElementById('searchInput').style.backgroundColor = 'white'
             document.getElementById('searchInput').style.color = 'black'
+        }
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    var openButton = document.getElementById('feeling');
+
+    openButton.addEventListener('click', function () {
+        var urlToOpen = 'https://www.buymeacoffee.com/mranshuman';
+
+        var newTab = window.open(urlToOpen, '_blank');
+
+        if (newTab) {
+            newTab.focus();
         }
     });
 });
