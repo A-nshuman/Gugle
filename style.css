@@ -8,6 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 90%;
+    background-color: black;
 }
 
 footer {
@@ -63,6 +64,8 @@ input {
     height: auto;
     padding: 20px 20px;
     font-size: 20px;
+    background-color: black;
+    color: white;
 }
 
 .row button {
@@ -80,6 +83,7 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: white;
 }
 
 #feeling{
@@ -87,7 +91,8 @@ footer{
     padding: 5px 10px;
     border-radius: 5px;
     border: 1px solid rgba(0, 0, 0, 0);
-    background-color: rgba(91, 91, 91, 0.123);
+    background-color: rgb(91, 91, 91);
+    color: white;
     cursor: pointer;
 }
 
@@ -155,7 +160,7 @@ footer{
 @media(max-width:430px) {
     input {
         width: 200px;
-        font-size: 10px;
+        font-size: 15px;
         height: 5px;
     }
 

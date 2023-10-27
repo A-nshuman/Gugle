@@ -45,29 +45,26 @@ document.addEventListener('DOMContentLoaded', function () {
     var foot = document.getElementById('foot')
 
     themeBtn.addEventListener("click", function () {
-
-        // body.classList.toggle('light-theme');
-        // body.classList.toggle('dark-theme');
-
-        if (themeBtn.innerHTML === '🌙') {
-            themeBtn.innerHTML = '🔆'
-            body.style.backgroundColor = 'black'
-            searchInput.style.backgroundColor = 'black'
-            searchInput.style.color = 'white'
-            feeling.style.backgroundColor = 'rgb(91, 91, 91)'
-            foot.style.color = 'white'
-        }
-        else {
+        if (themeBtn.innerHTML === '🔆') {
             themeBtn.innerHTML = '🌙'
             body.style.backgroundColor = 'white'
             searchInput.style.backgroundColor = 'white'
             searchInput.style.color = 'black'
             feeling.style.backgroundColor = 'rgba(91, 91, 91, 0.123)'
+            feeling.style.color = 'black'
             foot.style.color = 'black'
+        }
+        else {
+            themeBtn.innerHTML = '🔆'
+            body.style.backgroundColor = 'black'
+            searchInput.style.backgroundColor = 'black'
+            searchInput.style.color = 'white'
+            feeling.style.backgroundColor = 'rgb(91, 91, 91)'
+            feeling.style.color = 'white'
+            foot.style.color = 'white'
         }
     });
 });
-
 
 document.addEventListener('DOMContentLoaded', function () {
 
