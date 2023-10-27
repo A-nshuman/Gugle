@@ -8,14 +8,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
     searchButton.addEventListener('click', function () {
         const query = searchInput.value;
-        if (query) {
+        if (query.trim() === '') {
+            popup.style.display = 'block'
+        }
+        else if (isValidFullURL(query)) {
+            window.location.href = query;
+        }
+        else {
             const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
             window.location.href = searchUrl;
         }
-        else{
-            popup.style.display = 'block'
-        }
     });
+
+    function isValidFullURL(str) {
+        const pattern = new RegExp('^(https?:\\/\\/)' +
+            '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' +
+            '((\\d{1,3}\\.){3}\\d{1,3}))' +
+            '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' +
+            '(\\?[;&a-z\\d%_.~+=-]*)?' +
+            '(\\#[-a-z\\d_]*)?$', 'i');
+        return pattern.test(str);
+    }
 
     closeBtn.addEventListener('click', () => {
         popup.style.display = "none";
