@@ -11,4 +11,4 @@ A playful replica of the Google search page, creatively named "[गू GLE](http
 - A playful and unique theme for coding fun.
 - Toggle dark theme
 
-![Screenshot](images/ss.jpeg)
+![Screenshot](images/ss_dk.jpeg)
