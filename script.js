@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+
 // Dark Theme 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -55,7 +56,20 @@ document.addEventListener('DOMContentLoaded', function () {
     var themeBtn = document.getElementById('Theme');
     var searchInput = document.getElementById('searchInput');
     var feeling = document.getElementById('feeling');
-    var foot = document.getElementById('foot')
+    var foot = document.getElementById('foot');
+    var sug = document.getElementById('sug');
+    var sugBtns = {
+        git: document.getElementById('git'),
+        ttr: document.getElementById('ttr'),
+        igm: document.getElementById('igm'),
+        web: document.getElementById('web')
+    };
+    var sugest = {
+        gitBtn: document.getElementById('gitBtn'),
+        ttrBtn: document.getElementById('ttrBtn'),
+        igmBtn: document.getElementById('igmBtn'),
+        webBtn: document.getElementById('webBtn')
+    };
 
     themeBtn.addEventListener("click", function () {
         if (themeBtn.innerHTML === '🔆') {
@@ -66,8 +80,12 @@ document.addEventListener('DOMContentLoaded', function () {
             feeling.style.backgroundColor = 'rgba(91, 91, 91, 0.123)'
             feeling.style.color = 'black'
             foot.style.color = 'black'
+            sug.style.color = 'black'
+            for (var key in sugBtns) {
+                sugBtns[key].style.color = 'white';
+            }
         }
-        else {
+        else {  
             themeBtn.innerHTML = '🔆'
             body.style.backgroundColor = 'black'
             searchInput.style.backgroundColor = 'black'
@@ -75,9 +93,29 @@ document.addEventListener('DOMContentLoaded', function () {
             feeling.style.backgroundColor = 'rgb(91, 91, 91)'
             feeling.style.color = 'white'
             foot.style.color = 'white'
+            sug.style.color = 'white'
         }
     });
+
+    sugest.gitBtn.addEventListener('click', () => {
+        searchInput.value = 'https://github.com/A-nshuman'
+        searchInput.focus()
+    });
+    sugest.ttrBtn.addEventListener('click', () => {
+        searchInput.value = 'https://twitter.com/A_nshuman'
+        searchInput.focus()
+    });
+    sugest.igmBtn.addEventListener('click', () => {
+        searchInput.value = 'https://www.instagram.com/anshu_man_man/'
+        searchInput.focus()
+    });
+    sugest.webBtn.addEventListener('click', () => {
+        searchInput.value = 'https://anshumans-portfolio.netlify.app/'
+        searchInput.focus()
+    });
+
 });
+
 
 document.addEventListener('DOMContentLoaded', function () {
 
