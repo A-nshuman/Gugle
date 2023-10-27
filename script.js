@@ -1,12 +1,29 @@
 document.addEventListener('DOMContentLoaded', function () {
     const searchInput = document.getElementById('searchInput');
     const searchButton = document.getElementById('searchButton');
+    const popup = document.getElementById('popup');
+    const closeBtn = document.getElementById('closeBtn')
+
+    searchInput.focus()
 
     searchButton.addEventListener('click', function () {
         const query = searchInput.value;
         if (query) {
             const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
             window.location.href = searchUrl;
+        }
+        else{
+            popup.style.display = 'block'
+        }
+    });
+
+    closeBtn.addEventListener('click', () => {
+        popup.style.display = "none";
+    });
+
+    closeBtn.addEventListener('keyup', function (event) {
+        if (event.key === 'Escape') {
+            popup.style.display = "none";
         }
     });
 
@@ -21,27 +38,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    var themeBtn = document.getElementById('Theme');
     var body = document.body
+    var themeBtn = document.getElementById('Theme');
+    var searchInput = document.getElementById('searchInput');
+    var feeling = document.getElementById('feeling');
+    var foot = document.getElementById('foot')
 
     themeBtn.addEventListener("click", function () {
 
-        body.classList.toggle('light-theme');
-        body.classList.toggle('dark-theme');
+        // body.classList.toggle('light-theme');
+        // body.classList.toggle('dark-theme');
 
         if (themeBtn.innerHTML === '🌙') {
             themeBtn.innerHTML = '🔆'
             body.style.backgroundColor = 'black'
-            document.getElementById('searchInput').style.backgroundColor = 'black'
-            document.getElementById('searchInput').style.color = 'white'
-            document.getElementById('feeling').style.backgroundColor = 'rgb(91, 91, 91)'
+            searchInput.style.backgroundColor = 'black'
+            searchInput.style.color = 'white'
+            feeling.style.backgroundColor = 'rgb(91, 91, 91)'
+            foot.style.color = 'white'
         }
         else {
             themeBtn.innerHTML = '🌙'
             body.style.backgroundColor = 'white'
-            document.getElementById('searchInput').style.backgroundColor = 'white'
-            document.getElementById('searchInput').style.color = 'black'
-            document.getElementById('feeling').style.backgroundColor = 'rgba(91, 91, 91, 0.123)'
+            searchInput.style.backgroundColor = 'white'
+            searchInput.style.color = 'black'
+            feeling.style.backgroundColor = 'rgba(91, 91, 91, 0.123)'
+            foot.style.color = 'black'
         }
     });
 });
@@ -53,7 +75,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     openButton.addEventListener('click', function () {
         var urlToOpen = 'https://www.buymeacoffee.com/mranshuman';
-
         var newTab = window.open(urlToOpen, '_blank');
 
         if (newTab) {
