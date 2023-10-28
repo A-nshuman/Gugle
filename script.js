@@ -34,15 +34,12 @@ document.addEventListener('DOMContentLoaded', function () {
         popup.style.display = "none";
     });
 
-    closeBtn.addEventListener('keyup', function (event) {
-        if (event.key === 'Escape') {
-            popup.style.display = "none";
-        }
-    });
-
     searchInput.addEventListener('keyup', function (event) {
         if (event.key === 'Enter') {
             searchButton.click();
+        }
+        else if (event.key === 'Escape') {
+            popup.style.display = "none";
         }
     });
 });
