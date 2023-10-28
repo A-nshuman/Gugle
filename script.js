@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 sugBtns[key].style.color = 'white';
             }
         }
-        else {  
+        else {
             themeBtn.innerHTML = '🔆'
             body.style.backgroundColor = 'black'
             searchInput.style.backgroundColor = 'black'
