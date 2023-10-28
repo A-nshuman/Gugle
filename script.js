@@ -127,3 +127,26 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+// Placeholder dateTime
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    function updatePlaceholder() {
+        const inputField = document.getElementById("searchInput");
+        const currentTime = new Date();
+        const hours = currentTime.getHours();
+        const minutes = currentTime.getMinutes().toString().padStart(2, '0');
+        const seconds = currentTime.getSeconds().toString().padStart(2, '0');
+        const ampm = hours >= 12 ? 'PM' : 'AM';
+        const twelveHour = hours % 12 || 12;
+        const day = currentTime.toLocaleString('en-US', { weekday: 'short' });
+        const date = currentTime.toLocaleDateString('en-IN', { day: '2-digit', month: '2-digit', year: '2-digit' });
+
+        inputField.setAttribute("placeholder", `${twelveHour}:${minutes}:${seconds} ${ampm} | ${day}, ${date}`);
+    }
+
+    setInterval(updatePlaceholder, 1000);
+
+    updatePlaceholder();
+});
