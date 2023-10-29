@@ -3,19 +3,22 @@ document.addEventListener('DOMContentLoaded', function () {
     const searchButton = document.getElementById('searchButton');
     const popup = document.getElementById('popup');
     const closeBtn = document.getElementById('closeBtn')
+    const menu = document.getElementById('menu')
 
     searchInput.focus()
 
     searchButton.addEventListener('click', function () {
-        const query = searchInput.value;
+        var query = searchInput.value;
         if (query.trim() === '') {
             popup.style.display = 'block'
         }
         else if (query.startsWith('YouTube : ')) {
+            query = query.replace('YouTube : ', '');
             const searchUrl = `https://www.youtube.com/results?search_query=${(query)}`;
             window.location.href = searchUrl;
         }
         else if (query.startsWith('Images : ')) {
+            query = query.replace('Images : ', '');
             const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(query)}&tbm=isch`;
             window.location.href = searchUrl;
         }
@@ -47,7 +50,10 @@ document.addEventListener('DOMContentLoaded', function () {
             searchButton.click();
         }
         else if (event.key === 'Escape') {
+            event.preventDefault();
             popup.style.display = "none";
+            menu.style.display = "none";
+            Dots.innerHTML = '📁';
         }
     });
 });
@@ -137,9 +143,56 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+// Menu Functions + Feeling
+
 document.addEventListener('DOMContentLoaded', function () {
 
     var openButton = document.getElementById('feeling');
+    var aaBank = document.getElementById('aaBank');
+    var sSathi = document.getElementById('sSathi');
+    var guGle = document.getElementById('guGle');
+    var musPlay = document.getElementById('musPlay');
+    var menuCloseBtn = document.getElementById('menuCloseBtn');
+    var Dots = document.getElementById('Dots');
+
+    Dots.addEventListener('click', () => {
+        if (Dots.innerHTML === '📁') {
+            Dots.innerHTML = "📂";
+            menu.style.display = "flex";
+        }
+        else{
+            Dots.innerHTML = "📁";
+            menu.style.display = "none";
+        }
+    });
+
+    menuCloseBtn.addEventListener('click', () => {
+        Dots.innerHTML = "📁";
+        menu.style.display = "none";
+    });
+
+    aaBank.addEventListener('click', () => {
+        window.open("https://aashirvaad-bank.netlify.app/");
+        Dots.innerHTML = "📁";
+        menu.style.display = "none";
+    });
+
+    sSathi.addEventListener('click', () => {
+        window.open("https://samaysathi.netlify.app/");
+        Dots.innerHTML = "📁";
+        menu.style.display = "none";
+    });
+
+    guGle.addEventListener('click', () => {
+        Dots.innerHTML = "📁";
+        menu.style.display = "none";
+    });
+
+    musPlay.addEventListener('click', () => {
+        window.open("https://anshu-music-player.netlify.app/");
+        Dots.innerHTML = "📁";
+        menu.style.display = "none";
+    });
 
     openButton.addEventListener('click', function () {
         var urlToOpen = 'https://www.buymeacoffee.com/mranshuman';
