@@ -9,6 +9,7 @@ A playful replica of the Google search page, creatively named "[गू GLE](http
 - User interface resembling the Google search page.
 - Search functionality with results displayed.
 - A playful and unique theme for coding fun.
-- Toggle dark theme
+- Toggle dark theme.
+- Empty searchbar shows Time and Date.
 
 ![Screenshot](images/ss_dk.jpeg)
