@@ -11,6 +11,14 @@ document.addEventListener('DOMContentLoaded', function () {
         if (query.trim() === '') {
             popup.style.display = 'block'
         }
+        else if (query.startsWith('YouTube : ')) {
+            const searchUrl = `https://www.youtube.com/results?search_query=${(query)}`;
+            window.location.href = searchUrl;
+        }
+        else if (query.startsWith('Images : ')) {
+            const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(query)}&tbm=isch`;
+            window.location.href = searchUrl;
+        }
         else if (isValidFullURL(query)) {
             window.location.href = query;
         }
@@ -55,17 +63,22 @@ document.addEventListener('DOMContentLoaded', function () {
     var feeling = document.getElementById('feeling');
     var foot = document.getElementById('foot');
     var sug = document.getElementById('sug');
+    var direct = document.getElementById('direct');
     var sugBtns = {
         git: document.getElementById('git'),
         ttr: document.getElementById('ttr'),
         igm: document.getElementById('igm'),
-        web: document.getElementById('web')
+        web: document.getElementById('web'),
+        yt: document.getElementById('yt'),
+        im: document.getElementById('im')
     };
     var sugest = {
         gitBtn: document.getElementById('gitBtn'),
         ttrBtn: document.getElementById('ttrBtn'),
         igmBtn: document.getElementById('igmBtn'),
-        webBtn: document.getElementById('webBtn')
+        webBtn: document.getElementById('webBtn'),
+        ytBtn: document.getElementById('ytBtn'),
+        imBtn: document.getElementById('imBtn')
     };
 
     themeBtn.addEventListener("click", function () {
@@ -78,6 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
             feeling.style.color = 'black'
             foot.style.color = 'black'
             sug.style.color = 'black'
+            direct.style.color = 'black'
             for (var key in sugBtns) {
                 sugBtns[key].style.color = 'white';
             }
@@ -91,6 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
             feeling.style.color = 'white'
             foot.style.color = 'white'
             sug.style.color = 'white'
+            direct.style.color = 'white'
         }
     });
 
@@ -108,6 +123,14 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     sugest.webBtn.addEventListener('click', () => {
         searchInput.value = 'https://anshumans-portfolio.netlify.app/'
+        searchInput.focus()
+    });
+    sugest.ytBtn.addEventListener('click', () => {
+        searchInput.value = 'YouTube : '
+        searchInput.focus()
+    });
+    sugest.imBtn.addEventListener('click', () => {
+        searchInput.value = 'Images : '
         searchInput.focus()
     });
 
