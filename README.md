@@ -12,4 +12,4 @@ A playful replica of the Google search page, creatively named "[गू GLE](http
 - Toggle dark theme.
 - Empty searchbar shows Time and Date.
 
-![Screenshot](images/ss_dk.jpeg)
+![Screenshot](images/ss_new.jpeg)
