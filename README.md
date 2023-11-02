@@ -1,9 +1,9 @@
-# [खोजBOX](https://gu-gle.netlify.app/)
+# [खोजBOX](https://khoj-box.netlify.app/)
 
 ![GitHub top language](https://img.shields.io/github/languages/top/A-nshuman/KhojBox?color=rgb(247,223,30))
 ![GitHub repo size](https://img.shields.io/github/repo-size/A-nshuman/KhojBox?color=darkgreen)
 
-A playful replica of the Google search page, creatively named "[गू GLE](https://gu-gle.netlify.app/)", designed for fun and coding practice.
+A playful replica of the Google search page, creatively named "[खोजBOX](https://khoj-box.netlify.app/)", designed for fun and coding practice.
 
 ## Features
 - User interface resembling the Google search page.
