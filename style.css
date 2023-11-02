@@ -15,7 +15,6 @@ footer {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: 100;
 }
-
 footer a {
   text-decoration: none;
   color: rgb(42, 191, 191);
@@ -29,7 +28,6 @@ footer a {
 img {
   width: 400px;
   height: auto;
-  padding-bottom: 40px;
 }
 
 #Theme,
@@ -80,7 +78,8 @@ img {
 .menu .hdr p {
   cursor: pointer;
 }
-.menu .row1, .menu .row2 {
+.menu .row1,
+.menu .row2 {
   display: flex;
   flex-direction: row;
   gap: 10px;

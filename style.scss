@@ -14,11 +14,11 @@ body {
 footer {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 100;
-}
 
-footer a {
-    text-decoration: none;
-    color: rgb(42, 191, 191);
+    a {
+        text-decoration: none;
+        color: rgb(42, 191, 191);
+    }
 }
 
 .row {
@@ -29,7 +29,6 @@ footer a {
 img {
     width: 400px;
     height: auto;
-    padding-bottom: 40px;
 }
 
 #Theme,
@@ -77,24 +76,25 @@ img {
         justify-content: space-around;
         width: 100%;
 
-        p{
+        p {
             cursor: pointer;
         }
     }
 
-    .row1, .row2{
+    .row1,
+    .row2 {
         display: flex;
         flex-direction: row;
         gap: 10px;
     }
 
-    #aaBank{
-        h4{
+    #aaBank {
+        h4 {
             font-size: 13px;
         }
     }
 
-    .tile{
+    .tile {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -106,7 +106,7 @@ img {
         transition: 0.2s all ease-in-out;
         cursor: pointer;
 
-        .line{
+        .line {
             height: 1px;
             background-color: rgba(0, 0, 0, 0.137);
             width: 100%;
@@ -114,16 +114,16 @@ img {
             margin-bottom: 2px;
         }
 
-        h4{
+        h4 {
             margin: 0;
         }
     }
 
-    .tile:hover{
+    .tile:hover {
         background-color: rgba(128, 128, 128, 0.182);
     }
 
-    img{
+    img {
         height: 100px;
         width: auto;
         padding: 0;
