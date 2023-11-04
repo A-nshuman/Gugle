@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         else if (query.startsWith('Images : ')) {
             query = query.replace('Images : ', '');
-            const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(query)}&tbm=isch`;
+            const searchUrl = `https://www.google.com/search?igu=1?q=${encodeURIComponent(query)}&tbm=isch`;
             window.location.href = searchUrl;
         }
         else if (isValidFullURL(query)) {
