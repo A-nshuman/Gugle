@@ -2,8 +2,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const searchInput = document.getElementById('searchInput');
     const searchButton = document.getElementById('searchButton');
     const popup = document.getElementById('popup');
-    const closeBtn = document.getElementById('closeBtn')
-    const menu = document.getElementById('menu')
+    const closeBtn = document.getElementById('closeBtn');
+    const menu = document.getElementById('menu');
+    const frame = document.getElementById('resultFrame');
+    const themeBtn = document.getElementById('Theme');
+    const backBtn = document.getElementById('backBtn');
+
 
     searchInput.focus()
 
@@ -26,8 +30,14 @@ document.addEventListener('DOMContentLoaded', function () {
             window.location.href = query;
         }
         else {
-            const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
-            window.location.href = searchUrl;
+            const searchUrl = `https://www.google.com/search?igu=1&ei=&q=${encodeURIComponent(query)}`;
+            // window.location.href = searchUrl;
+            frame.style.display = 'block'
+            frame.src = searchUrl
+            frame.focus()
+            Dots.style.display = 'none'
+            themeBtn.style.display = 'none'
+            backBtn.style.display = 'block'
         }
     });
 
@@ -43,6 +53,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     closeBtn.addEventListener('click', () => {
         popup.style.display = "none";
+    });
+
+    backBtn.addEventListener('click', () => {
+        frame.style.display = 'none';
+        searchInput.value = '';
+        searchInput.focus()
+        Dots.style.display = 'block'
+        themeBtn.style.display = 'block'
+        backBtn.style.display = 'none'
     });
 
     searchInput.addEventListener('keyup', function (event) {
@@ -160,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function () {
             Dots.innerHTML = "📂";
             menu.style.display = "flex";
         }
-        else{
+        else {
             Dots.innerHTML = "📁";
             menu.style.display = "none";
         }

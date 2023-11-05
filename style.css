@@ -10,6 +10,14 @@ body {
   height: 90%;
   background-color: black;
 }
+body #resultFrame {
+  display: none;
+  bottom: 0;
+  border: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
 
 footer {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -31,7 +39,8 @@ img {
 }
 
 #Theme,
-#Dots {
+#Dots,
+#backBtn {
   position: absolute;
   top: 10px;
   z-index: 999;
@@ -42,6 +51,13 @@ img {
   padding-top: 5px;
   font-size: 30px;
   cursor: pointer;
+}
+
+#backBtn {
+  color: rgb(138, 138, 138);
+  left: 10px;
+  display: none;
+  filter: drop-shadow(0 0 10px white);
 }
 
 #Theme {
