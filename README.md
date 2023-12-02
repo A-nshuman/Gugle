@@ -1,4 +1,4 @@
-# [खोजBOX](https://khoj-box.netlify.app/)
+# [<img src='images/khojBoxLogo.png' alt='logo' width='30'> खोजBOX](https://khoj-box.netlify.app/)
 
 ![GitHub top language](https://img.shields.io/github/languages/top/A-nshuman/KhojBox?color=rgb(247,223,30))
 ![GitHub repo size](https://img.shields.io/github/repo-size/A-nshuman/KhojBox?color=darkgreen)
