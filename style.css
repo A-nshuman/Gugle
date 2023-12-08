@@ -10,6 +10,14 @@ body {
   height: 90%;
   background-color: black;
 }
+body #resultFrame {
+  display: none;
+  bottom: 0;
+  border: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
 
 footer {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -31,7 +39,8 @@ img {
 }
 
 #Theme,
-#Dots {
+#Dots,
+#backBtn {
   position: absolute;
   top: 10px;
   z-index: 999;
@@ -44,12 +53,36 @@ img {
   cursor: pointer;
 }
 
+#backBtn {
+  color: rgb(138, 138, 138);
+  left: 10px;
+  display: none;
+  filter: drop-shadow(0 0 10px white);
+}
+
 #Theme {
   right: 10px;
 }
 
 #Dots {
   left: 10px;
+}
+
+.menu::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.menu::-webkit-scrollbar {
+  width: 5px;
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+.menu::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(180deg, rgba(2, 0, 36, 0) 0%, rgb(255, 255, 255) 50%, rgba(0, 212, 255, 0) 100%);
 }
 
 .menu {
@@ -65,7 +98,8 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.137);
   border-radius: 15px;
   width: 300px;
-  height: auto;
+  height: 400px;
+  overflow-y: scroll;
   padding-bottom: 30px;
 }
 .menu .hdr {
@@ -78,14 +112,16 @@ img {
 .menu .hdr p {
   cursor: pointer;
 }
-.menu .row1,
-.menu .row2 {
+.menu .approws {
   display: flex;
   flex-direction: row;
   gap: 10px;
 }
 .menu #aaBank h4 {
   font-size: 13px;
+}
+.menu #pcSim img {
+  filter: drop-shadow(0 0 10px black);
 }
 .menu .tile {
   display: flex;
