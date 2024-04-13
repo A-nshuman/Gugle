@@ -224,7 +224,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     pcSim.addEventListener('click', () => {
-        openLink("https://anshu-pcsimulator.netlify.app/");
+        openLink("https://anshuman.me");
     });
 
     calcSite.addEventListener('click', () => {
