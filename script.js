@@ -176,6 +176,8 @@ document.addEventListener('DOMContentLoaded', function () {
     var bmicalc = document.getElementById('bmiCalc');
     var ptable = document.getElementById('ptable');
     var pcSim = document.getElementById('pcSim');
+    var curCon = document.getElementById('curCon');
+    var eleb = document.getElementById('eleb');
     var Dots = document.getElementById('Dots');
 
     Dots.addEventListener('click', () => {
@@ -194,16 +196,18 @@ document.addEventListener('DOMContentLoaded', function () {
         menu.style.display = "none";
     });
 
-    aaBank.addEventListener('click', () => {
-        window.open("https://aashirvaad-bank.netlify.app/");
+    function openLink(link) {
+        window.open(link);
         Dots.innerHTML = "📁";
         menu.style.display = "none";
+    }
+
+    aaBank.addEventListener('click', () => {
+        openLink("https://aashirvaad-bank.netlify.app/");
     });
 
     sSathi.addEventListener('click', () => {
-        window.open("https://samaysathi.netlify.app/");
-        Dots.innerHTML = "📁";
-        menu.style.display = "none";
+        openLink("https://samaysathi.netlify.app/");
     });
 
     guGle.addEventListener('click', () => {
@@ -212,33 +216,31 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     musPlay.addEventListener('click', () => {
-        window.open("https://anshu-music-player.netlify.app/");
-        Dots.innerHTML = "📁";
-        menu.style.display = "none";
+        openLink("https://anshu-music.netlify.app/");
     });
 
     ptable.addEventListener('click', () => {
-        window.open("https://aptable.netlify.app/");
-        Dots.innerHTML = "📁";
-        menu.style.display = "none";
+        openLink("https://anshu-periodictable.netlify.app/");
     });
 
     pcSim.addEventListener('click', () => {
-        window.open("https://anshu-pc.netlify.app/");
-        Dots.innerHTML = "📁";
-        menu.style.display = "none";
+        openLink("https://anshu-pcsimulator.netlify.app/");
     });
-    
+
     calcSite.addEventListener('click', () => {
-        window.open("https://acalc.netlify.app/");
-        Dots.innerHTML = "📁";
-        menu.style.display = "none";
+        openLink("https://anshu-calculator.netlify.app/");
     });
 
     bmicalc.addEventListener('click', () => {
-        window.open("https://abmicalc.netlify.app/");
-        Dots.innerHTML = "📁";
-        menu.style.display = "none";
+        openLink("https://anshu-bmicalculator.netlify.app/");
+    });
+
+    curCon.addEventListener('click', () => {
+        openLink("https://a-currency.netlify.app/");
+    });
+
+    eleb.addEventListener('click', () => {
+        openLink("https://enjoylife-enjoybiology.netlify.app/");
     });
 
     openButton.addEventListener('click', function () {
