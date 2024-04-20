@@ -178,6 +178,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var pcSim = document.getElementById('pcSim');
     var curCon = document.getElementById('curCon');
     var eleb = document.getElementById('eleb');
+    var temp = document.getElementById('tempConvert');
     var Dots = document.getElementById('Dots');
 
     Dots.addEventListener('click', () => {
@@ -241,6 +242,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     eleb.addEventListener('click', () => {
         openLink("https://enjoylife-enjoybiology.netlify.app/");
+    });
+
+    temp.addEventListener('click', () => {
+        openLink("https://convert-a-temp.netlify.app/");
     });
 
     openButton.addEventListener('click', function () {
